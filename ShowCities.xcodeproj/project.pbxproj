@@ -38,6 +38,7 @@
 		DF84084D269344B600B6F484 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84084C269344B600B6F484 /* NetworkRouter.swift */; };
 		DF840852269345FA00B6F484 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF840851269345FA00B6F484 /* Router.swift */; };
 		DF8408572693469D00B6F484 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408562693469D00B6F484 /* APIError.swift */; };
+		DF84085C2693497800B6F484 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84085B2693497800B6F484 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		DF84084C269344B600B6F484 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		DF840851269345FA00B6F484 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DF8408562693469D00B6F484 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		DF84085B2693497800B6F484 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 				DF8408342693414500B6F484 /* Endpoint.swift */,
 				DF84084C269344B600B6F484 /* NetworkRouter.swift */,
 				DF840851269345FA00B6F484 /* Router.swift */,
+				DF84085B2693497800B6F484 /* NetworkManager.swift */,
 				DF8408562693469D00B6F484 /* APIError.swift */,
 				DF8408472693434A00B6F484 /* HTTPMethod.swift */,
 				DF8408422693423700B6F484 /* HTTPTask.swift */,
@@ -420,6 +423,7 @@
 				DF8407D426904C7E00B6F484 /* CountriesViewController.swift in Sources */,
 				DF84077C268FA99C00B6F484 /* SceneDelegate.swift in Sources */,
 				DF8408482693434A00B6F484 /* HTTPMethod.swift in Sources */,
+				DF84085C2693497800B6F484 /* NetworkManager.swift in Sources */,
 				DF840852269345FA00B6F484 /* Router.swift in Sources */,
 				DF8408352693414500B6F484 /* Endpoint.swift in Sources */,
 				DF8407C526904C2100B6F484 /* CountriesCoordinator.swift in Sources */,
