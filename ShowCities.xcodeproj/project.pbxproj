@@ -31,6 +31,13 @@
 		DF8408162693059900B6F484 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408152693059900B6F484 /* CountryDetailsViewController.swift */; };
 		DF84081B269305B300B6F484 /* CountryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84081A269305B300B6F484 /* CountryDetailsView.swift */; };
 		DF84082D269333E100B6F484 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DF84082C269333E100B6F484 /* SnapKit */; };
+		DF8408352693414500B6F484 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408342693414500B6F484 /* Endpoint.swift */; };
+		DF84083E269341F800B6F484 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84083D269341F800B6F484 /* EndpointType.swift */; };
+		DF8408432693423700B6F484 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408422693423700B6F484 /* HTTPTask.swift */; };
+		DF8408482693434A00B6F484 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408472693434A00B6F484 /* HTTPMethod.swift */; };
+		DF84084D269344B600B6F484 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84084C269344B600B6F484 /* NetworkRouter.swift */; };
+		DF840852269345FA00B6F484 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF840851269345FA00B6F484 /* Router.swift */; };
+		DF8408572693469D00B6F484 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408562693469D00B6F484 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +87,13 @@
 		DF8408102693057D00B6F484 /* CountryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewModel.swift; sourceTree = "<group>"; };
 		DF8408152693059900B6F484 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		DF84081A269305B300B6F484 /* CountryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsView.swift; sourceTree = "<group>"; };
+		DF8408342693414500B6F484 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DF84083D269341F800B6F484 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		DF8408422693423700B6F484 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		DF8408472693434A00B6F484 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DF84084C269344B600B6F484 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		DF840851269345FA00B6F484 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DF8408562693469D00B6F484 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,7 @@
 				DF8407E126904CC700B6F484 /* Modules */,
 				DF8407B62690400000B6F484 /* Protocols */,
 				DF8407E526904D2B00B6F484 /* Support files */,
+				DF8408392693415500B6F484 /* APIService */,
 			);
 			path = ShowCities;
 			sourceTree = "<group>";
@@ -237,6 +252,20 @@
 				DF84081A269305B300B6F484 /* CountryDetailsView.swift */,
 			);
 			path = CountryDetails;
+			sourceTree = "<group>";
+		};
+		DF8408392693415500B6F484 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				DF8408342693414500B6F484 /* Endpoint.swift */,
+				DF84084C269344B600B6F484 /* NetworkRouter.swift */,
+				DF840851269345FA00B6F484 /* Router.swift */,
+				DF8408562693469D00B6F484 /* APIError.swift */,
+				DF8408472693434A00B6F484 /* HTTPMethod.swift */,
+				DF8408422693423700B6F484 /* HTTPTask.swift */,
+				DF84083D269341F800B6F484 /* EndpointType.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,7 +404,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8408432693423700B6F484 /* HTTPTask.swift in Sources */,
+				DF84083E269341F800B6F484 /* EndpointType.swift in Sources */,
 				DF84081B269305B300B6F484 /* CountryDetailsView.swift in Sources */,
+				DF84084D269344B600B6F484 /* NetworkRouter.swift in Sources */,
 				DF8407FE269300FD00B6F484 /* CountryEntity.swift in Sources */,
 				DF8407BB2690411200B6F484 /* ObservedViewController.swift in Sources */,
 				DF84077E268FA99C00B6F484 /* ViewController.swift in Sources */,
@@ -387,11 +419,15 @@
 				DF8407D926904C9200B6F484 /* CountriesView.swift in Sources */,
 				DF8407D426904C7E00B6F484 /* CountriesViewController.swift in Sources */,
 				DF84077C268FA99C00B6F484 /* SceneDelegate.swift in Sources */,
+				DF8408482693434A00B6F484 /* HTTPMethod.swift in Sources */,
+				DF840852269345FA00B6F484 /* Router.swift in Sources */,
+				DF8408352693414500B6F484 /* Endpoint.swift in Sources */,
 				DF8407C526904C2100B6F484 /* CountriesCoordinator.swift in Sources */,
 				DF8407AD26903F3F00B6F484 /* ViewModelBindable.swift in Sources */,
 				DF8407CA26904C3000B6F484 /* CountriesViewModelType.swift in Sources */,
 				DF84080C2693056D00B6F484 /* CountryDetailsViewModelType.swift in Sources */,
 				DF8408112693057D00B6F484 /* CountryDetailsViewModel.swift in Sources */,
+				DF8408572693469D00B6F484 /* APIError.swift in Sources */,
 				DF8407C0269041A000B6F484 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
