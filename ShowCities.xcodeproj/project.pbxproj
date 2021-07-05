@@ -24,6 +24,7 @@
 		DF8407CF26904C7300B6F484 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8407CE26904C7300B6F484 /* CountriesViewModel.swift */; };
 		DF8407D426904C7E00B6F484 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8407D326904C7E00B6F484 /* CountriesViewController.swift */; };
 		DF8407D926904C9200B6F484 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8407D826904C9200B6F484 /* CountriesView.swift */; };
+		DF8407FE269300FD00B6F484 /* CountryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8407FD269300FD00B6F484 /* CountryEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DF8407CE26904C7300B6F484 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		DF8407D326904C7E00B6F484 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		DF8407D826904C9200B6F484 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
+		DF8407FD269300FD00B6F484 /* CountryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				DF8407E626904D3F00B6F484 /* Application */,
 				DF8407EA26904D5800B6F484 /* Common */,
+				DF8408022693010400B6F484 /* Entities */,
 				DF8407E126904CC700B6F484 /* Modules */,
 				DF8407B62690400000B6F484 /* Protocols */,
 				DF8407E526904D2B00B6F484 /* Support files */,
@@ -201,6 +204,14 @@
 				DF8407BF269041A000B6F484 /* AppCoordinator.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		DF8408022693010400B6F484 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DF8407FD269300FD00B6F484 /* CountryEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8407FE269300FD00B6F484 /* CountryEntity.swift in Sources */,
 				DF8407BB2690411200B6F484 /* ObservedViewController.swift in Sources */,
 				DF84077E268FA99C00B6F484 /* ViewController.swift in Sources */,
 				DF84077A268FA99C00B6F484 /* AppDelegate.swift in Sources */,
