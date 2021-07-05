@@ -13,7 +13,8 @@ class CountriesCoordinator: CoordinatorProtocol {
 
     func start(from viewController: ObservedViewController) -> AnyPublisher<Void, Never> {
        
-        let countriesViewModel = CountriesViewModel()
+        let networkService = NetworkManager()
+        let countriesViewModel = CountriesViewModel(networkService: networkService)
         let newViewController = CountriesViewController(viewModel: countriesViewModel)
         
         newViewController.view.frame = viewController.view.frame

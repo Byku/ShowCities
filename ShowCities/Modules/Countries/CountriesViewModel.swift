@@ -11,6 +11,11 @@ import Combine
 class CountriesViewModel {
     public var doneSignal = PassthroughSubject<Void, Never>()
     private var subscribtions = Set<AnyCancellable>()
+    private let networkService: NetworkManagerable
+    
+    init(networkService: NetworkManagerable) {
+        self.networkService = networkService
+    }
 }
 
 extension CountriesViewModel: CountriesViewModelType {
