@@ -14,6 +14,9 @@ private extension CountryCell {
     enum Constants {
         static let smallOffset: CGFloat = 8
         static let largeOffset: CGFloat = 16
+        static let textColor: UIColor = .black
+        
+        static let cornerRadius: CGFloat = 4
     }
 }
 
@@ -57,6 +60,10 @@ private extension CountryCell {
     func initState() {
         selectionStyle = .none
         contentView.backgroundColor = .white
+        contentView.clipsToBounds = true
+        contentView.layer.cornerRadius = Constants.cornerRadius
+        contentView.layer.maskedCorners = [.layerMaxXMinYCorner]
+            
         backgroundColor = .clear
 
         contentView.addSubview(titleLabel)
@@ -79,15 +86,20 @@ private extension CountryCell {
     func createTitleLabel() -> UILabel {
         let label = UILabel(frame: .zero)
         label.numberOfLines = 1
+        label.textColor = Constants.textColor
         label.lineBreakMode = .byTruncatingTail
         return label
     }
 }
 
 extension CountryCell {
-    // MARK: RowCell
+    // MARK: public method
 
     func setViewModel(_ viewModel: CountryViewModelProtocol) {
         self.viewModel = viewModel
+    }
+    
+    func colorizeBackground(byRow line: Int) {
+        contentView.backgroundColor = line % 2 == 1 ? .lightGray : .white
     }
 }
