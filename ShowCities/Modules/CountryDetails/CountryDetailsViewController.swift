@@ -10,14 +10,10 @@ import UIKit
 
 class CountryDetailsViewController: ObservedViewController, ViewModelBindable {
     typealias ViewModel = CountryDetailsViewModelType
-    var viewModel: ViewModel {
-        didSet {
-            bindViewModel()
-        }
-    }
+    var viewModel: ViewModel
     
     private var subscriptions = Set<AnyCancellable>()
-    lazy var countriesView = view as! CountriesView
+    lazy var countryDetailsView = view as! CountryDetailsView
     
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
@@ -33,7 +29,9 @@ class CountryDetailsViewController: ObservedViewController, ViewModelBindable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view = CountriesView()
+        bindViewModel()
+        
+        view = CountryDetailsView()
     }
 }
 
@@ -53,8 +51,17 @@ extension CountryDetailsViewController {
     
     func render(_ state: CountryDetailsState) {
         switch state {
-        case .idle:
-            view.backgroundColor = .blue
+        case .idle: break
         }
+    }
+}
+
+extension CountryDetailsViewController {
+    // MARK: a little bit of bad code
+    // TODO: fix it
+    
+    func showCapitalCityName(with viewModel: CountryViewModelProtocol) {
+        countryDetailsView.titleLabel.text = "Страна: \(viewModel.countryName)"
+        countryDetailsView.subTitleLable.text = "Столица: \(viewModel.capitalCityName)"
     }
 }

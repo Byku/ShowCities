@@ -8,13 +8,17 @@
 import Combine
 
 class CountryDetailsCoordinator: CoordinatorProtocol {
+    var countryViewModel: CountryViewModelProtocol?
     var subscriptions = Set<AnyCancellable>()
 
     func start(from viewController: ObservedViewController) -> AnyPublisher<Void, Never> {
         let countryDetailsViewModel = CountryDetailsViewModel()
         let newViewController = CountryDetailsViewController(viewModel: countryDetailsViewModel)
         
-        viewController.present(newViewController, animated: true)
+        viewController.present(newViewController, animated: true) {
+            guard let viewModel = self.countryViewModel else { return }
+            newViewController.showCapitalCityName(with: viewModel)
+        }
 
         return Empty().eraseToAnyPublisher()
     }
