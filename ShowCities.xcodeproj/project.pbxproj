@@ -42,6 +42,7 @@
 		DF8408622694303700B6F484 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408612694303700B6F484 /* CountryCell.swift */; };
 		DF84086B2694315500B6F484 /* CountryViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84086A2694315500B6F484 /* CountryViewModelProtocol.swift */; };
 		DF8408732694316800B6F484 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408722694316800B6F484 /* CountryViewModel.swift */; };
+		DF8408782694447B00B6F484 /* FailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408772694447B00B6F484 /* FailureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		DF8408612694303700B6F484 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		DF84086A2694315500B6F484 /* CountryViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModelProtocol.swift; sourceTree = "<group>"; };
 		DF8408722694316800B6F484 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		DF8408772694447B00B6F484 /* FailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				DF8407CE26904C7300B6F484 /* CountriesViewModel.swift */,
 				DF8407D326904C7E00B6F484 /* CountriesViewController.swift */,
 				DF8407D826904C9200B6F484 /* CountriesView.swift */,
+				DF8408772694447B00B6F484 /* FailureView.swift */,
 				DF8408662694304F00B6F484 /* Cells */,
 			);
 			path = Countries;
@@ -425,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8408432693423700B6F484 /* HTTPTask.swift in Sources */,
+				DF8408782694447B00B6F484 /* FailureView.swift in Sources */,
 				DF84083E269341F800B6F484 /* EndpointType.swift in Sources */,
 				DF84081B269305B300B6F484 /* CountryDetailsView.swift in Sources */,
 				DF84084D269344B600B6F484 /* NetworkRouter.swift in Sources */,

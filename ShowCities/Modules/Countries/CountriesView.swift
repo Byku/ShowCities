@@ -18,7 +18,8 @@ private extension CountriesView {
 
 class CountriesView: UIView {
     
-    private lazy var tableView = createTableView()
+    lazy var tableView = createTableView()
+    lazy var failureView = FailureView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,6 +33,7 @@ class CountriesView: UIView {
     
     func configureViews() {
         addSubview(tableView)
+        addSubview(failureView)
     }
     
     func layoutViews() {
@@ -39,11 +41,17 @@ class CountriesView: UIView {
             $0.top.left.equalToSuperview().offset(Constants.smallOffset)
             $0.right.bottom.equalToSuperview().inset(Constants.smallOffset)
         }
+        
+        failureView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
         
 }
 
 private extension CountriesView {
+    // MARK: View factory methods
+    
     func createTableView() -> UITableView {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
@@ -54,5 +62,16 @@ private extension CountriesView {
         tableView.register(CountryCell.self, forCellReuseIdentifier: CountryCell.identifier)
         
         return tableView
+    }
+}
+
+extension CountriesView {
+    func showFailureView(_ error: Error) {
+        failureView.setError(error.localizedDescription)
+        failureView.isHidden = false
+    }
+    
+    func hideFailureView() {
+        failureView.isHidden = true
     }
 }
