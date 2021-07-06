@@ -10,13 +10,18 @@ import Combine
 struct CountriesViewModelInput { }
 
 enum CountriesState {
-    case idle
+    case loading
+    case ready
+    case failure(Error)
 }
 
 extension CountriesState: Equatable {
     static func == (lhs: CountriesState, rhs: CountriesState) -> Bool {
         switch (lhs, rhs) {
-        case (.idle, .idle): return true
+        case (.loading, .loading): return true
+        case (.ready, .ready): return true
+        case (.failure, .failure): return true
+        default: return false
         }
     }
 }
