@@ -39,6 +39,9 @@
 		DF840852269345FA00B6F484 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF840851269345FA00B6F484 /* Router.swift */; };
 		DF8408572693469D00B6F484 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408562693469D00B6F484 /* APIError.swift */; };
 		DF84085C2693497800B6F484 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84085B2693497800B6F484 /* NetworkManager.swift */; };
+		DF8408622694303700B6F484 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408612694303700B6F484 /* CountryCell.swift */; };
+		DF84086B2694315500B6F484 /* CountryViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84086A2694315500B6F484 /* CountryViewModelProtocol.swift */; };
+		DF8408732694316800B6F484 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408722694316800B6F484 /* CountryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,9 @@
 		DF840851269345FA00B6F484 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DF8408562693469D00B6F484 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		DF84085B2693497800B6F484 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DF8408612694303700B6F484 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		DF84086A2694315500B6F484 /* CountryViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModelProtocol.swift; sourceTree = "<group>"; };
+		DF8408722694316800B6F484 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,7 @@
 				DF8407CE26904C7300B6F484 /* CountriesViewModel.swift */,
 				DF8407D326904C7E00B6F484 /* CountriesViewController.swift */,
 				DF8407D826904C9200B6F484 /* CountriesView.swift */,
+				DF8408662694304F00B6F484 /* Cells */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -269,6 +276,16 @@
 				DF84083D269341F800B6F484 /* EndpointType.swift */,
 			);
 			path = APIService;
+			sourceTree = "<group>";
+		};
+		DF8408662694304F00B6F484 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DF8408612694303700B6F484 /* CountryCell.swift */,
+				DF84086A2694315500B6F484 /* CountryViewModelProtocol.swift */,
+				DF8408722694316800B6F484 /* CountryViewModel.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,11 +431,13 @@
 				DF8407FE269300FD00B6F484 /* CountryEntity.swift in Sources */,
 				DF8407BB2690411200B6F484 /* ObservedViewController.swift in Sources */,
 				DF84077E268FA99C00B6F484 /* ViewController.swift in Sources */,
+				DF84086B2694315500B6F484 /* CountryViewModelProtocol.swift in Sources */,
 				DF84077A268FA99C00B6F484 /* AppDelegate.swift in Sources */,
 				DF8407CF26904C7300B6F484 /* CountriesViewModel.swift in Sources */,
 				DF8407B226903FF100B6F484 /* CoordinatorProtocol.swift in Sources */,
 				DF8408072693054C00B6F484 /* CountryDetailsCoordinator.swift in Sources */,
 				DF8408162693059900B6F484 /* CountryDetailsViewController.swift in Sources */,
+				DF8408732694316800B6F484 /* CountryViewModel.swift in Sources */,
 				DF8407D926904C9200B6F484 /* CountriesView.swift in Sources */,
 				DF8407D426904C7E00B6F484 /* CountriesViewController.swift in Sources */,
 				DF84077C268FA99C00B6F484 /* SceneDelegate.swift in Sources */,
@@ -433,6 +452,7 @@
 				DF8408112693057D00B6F484 /* CountryDetailsViewModel.swift in Sources */,
 				DF8408572693469D00B6F484 /* APIError.swift in Sources */,
 				DF8407C0269041A000B6F484 /* AppCoordinator.swift in Sources */,
+				DF8408622694303700B6F484 /* CountryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
