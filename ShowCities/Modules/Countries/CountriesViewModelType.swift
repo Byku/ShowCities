@@ -7,7 +7,11 @@
 
 import Combine
 
-struct CountriesViewModelInput { }
+struct CountriesViewModelInput {
+    let lifeCycleEvent: AnyPublisher<LifecycleEvent, Never>
+    let retryTapEvent: AnyPublisher<Void, Never>
+    let refreshEvent: AnyPublisher<Void, Never>
+}
 
 enum CountriesState {
     case loading
@@ -30,5 +34,9 @@ typealias CountriesViewModelOutput = AnyPublisher<CountriesState, Never>
 
 protocol CountriesViewModelType {
     var doneSignal: PassthroughSubject<Void, Never> { set get }
+    var networkService: NetworkManagerable { get }
+    var countriesArray: Array<CountryEntity> { set get}
+    func numberOfRows() -> Int
     func transform(input: CountriesViewModelInput) -> CountriesViewModelOutput
+    func cellViewModel(for row: Int) -> CountryViewModelProtocol
 }
