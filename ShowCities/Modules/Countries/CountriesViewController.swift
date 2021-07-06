@@ -45,6 +45,7 @@ class CountriesViewController: ObservedViewController, ViewModelBindable {
         tableView?.refreshControl = refreshControl
         
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        countriesView.failureView.retryButton.addTarget(self, action: #selector(retryButtonTapped), for: .touchUpInside)
     }
 }
 
@@ -86,6 +87,10 @@ extension CountriesViewController {
 private extension CountriesViewController {
     @objc func refresh() {
         refreshEvent.send()
+    }
+    
+    @objc func retryButtonTapped() {
+        retryTapping.send()
     }
 }
 
