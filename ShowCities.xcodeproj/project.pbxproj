@@ -43,6 +43,7 @@
 		DF84086B2694315500B6F484 /* CountryViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84086A2694315500B6F484 /* CountryViewModelProtocol.swift */; };
 		DF8408732694316800B6F484 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408722694316800B6F484 /* CountryViewModel.swift */; };
 		DF8408782694447B00B6F484 /* FailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408772694447B00B6F484 /* FailureView.swift */; };
+		DF8408812694F51400B6F484 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8408802694F51400B6F484 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		DF84086A2694315500B6F484 /* CountryViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModelProtocol.swift; sourceTree = "<group>"; };
 		DF8408722694316800B6F484 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		DF8408772694447B00B6F484 /* FailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureView.swift; sourceTree = "<group>"; };
+		DF8408802694F51400B6F484 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				DF8407D326904C7E00B6F484 /* CountriesViewController.swift */,
 				DF8407D826904C9200B6F484 /* CountriesView.swift */,
 				DF8408772694447B00B6F484 /* FailureView.swift */,
+				DF8408802694F51400B6F484 /* LoadingView.swift */,
 				DF8408662694304F00B6F484 /* Cells */,
 			);
 			path = Countries;
@@ -456,6 +459,7 @@
 				DF8408112693057D00B6F484 /* CountryDetailsViewModel.swift in Sources */,
 				DF8408572693469D00B6F484 /* APIError.swift in Sources */,
 				DF8407C0269041A000B6F484 /* AppCoordinator.swift in Sources */,
+				DF8408812694F51400B6F484 /* LoadingView.swift in Sources */,
 				DF8408622694303700B6F484 /* CountryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

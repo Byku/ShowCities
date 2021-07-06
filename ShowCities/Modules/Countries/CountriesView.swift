@@ -20,6 +20,7 @@ class CountriesView: UIView {
     
     lazy var tableView = createTableView()
     lazy var failureView = FailureView()
+    lazy var loadingView = LoadingView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,8 +33,12 @@ class CountriesView: UIView {
     }
     
     func configureViews() {
+        backgroundColor = .white
         addSubview(tableView)
+        addSubview(loadingView)
         addSubview(failureView)
+        loadingView.isHidden = true
+        failureView.isHidden = true
     }
     
     func layoutViews() {
@@ -43,6 +48,10 @@ class CountriesView: UIView {
         }
         
         failureView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        loadingView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
@@ -66,6 +75,8 @@ private extension CountriesView {
 }
 
 extension CountriesView {
+    // MARK: public methods
+    
     func showFailureView(_ error: Error) {
         failureView.setError(error.localizedDescription)
         failureView.isHidden = false
@@ -73,5 +84,13 @@ extension CountriesView {
     
     func hideFailureView() {
         failureView.isHidden = true
+    }
+    
+    func showLoadingView() {
+        loadingView.isHidden = false
+    }
+    
+    func hideLoadingView() {
+        loadingView.isHidden = true
     }
 }
