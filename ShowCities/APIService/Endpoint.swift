@@ -31,7 +31,7 @@ extension CountiesAPI: EndpointType {
     }
     
     public var httpMethod: HTTPMethod {
-        .post
+        .get
     }
     
     public var task: HTTPTask {
