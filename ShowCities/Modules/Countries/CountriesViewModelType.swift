@@ -33,7 +33,7 @@ extension CountriesState: Equatable {
 typealias CountriesViewModelOutput = AnyPublisher<CountriesState, Never>
 
 protocol CountriesViewModelType {
-    var doneSignal: PassthroughSubject<Void, Never> { set get }
+    var doneSignal: PassthroughSubject<CountryViewModelProtocol, Never> { set get }
     var networkService: NetworkManagerable { get }
     var countriesArray: Array<CountryEntity> { set get}
     func numberOfRows() -> Int

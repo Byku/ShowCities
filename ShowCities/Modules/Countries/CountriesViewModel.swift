@@ -11,7 +11,7 @@ import Combine
 class CountriesViewModel {
     public let isLoadingAction = PassthroughSubject<Void, Never>()
     public let startLoadingAction = PassthroughSubject<Void, Never>()
-    public var doneSignal = PassthroughSubject<Void, Never>()
+    public var doneSignal = PassthroughSubject<CountryViewModelProtocol, Never>()
     private var subscribtions = Set<AnyCancellable>()
     internal let networkService: NetworkManagerable
     internal var countriesArray: Array<CountryEntity>

@@ -115,5 +115,7 @@ extension CountriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let cellViewModel = viewModel.cellViewModel(for: indexPath.row)
+        viewModel.doneSignal.send(cellViewModel)
     }
 }
