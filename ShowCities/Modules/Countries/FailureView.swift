@@ -19,12 +19,13 @@ private extension FailureView {
         static let buttonBgColor: UIColor = .lightGray
         static let buttonTextColor: UIColor = .darkGray
         static let bgColor: UIColor = .white
+        static let textColor: UIColor = .black
         
         static let largeOffset = 80
         static let mediumOffset = 24
         static let labelHeight = 32
         static let buttonHeight = 50
-        static let buttonWidth = 150
+        static let buttonWidth = 250
     }
 }
 
@@ -78,12 +79,15 @@ private extension FailureView {
     func createTitleLabel() -> UILabel {
         let label = UILabel(frame: .zero)
         label.text = Constants.titleText
+        label.textColor = Constants.textColor
+        label.textAlignment = .center
         label.numberOfLines = 1
         return label
     }
     
     func createSubtitleLabel() -> UILabel {
         let label = UILabel(frame: .zero)
+        label.textColor = Constants.textColor
         label.numberOfLines = 0
         return label
     }
