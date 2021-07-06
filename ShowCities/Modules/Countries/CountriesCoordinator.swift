@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Foundation
 
 
 class CountriesCoordinator: CoordinatorProtocol {
@@ -23,6 +24,15 @@ class CountriesCoordinator: CoordinatorProtocol {
         viewController.addChild(newViewController)
         viewController.view.addSubview(newViewController.view)
         newViewController.didMove(toParent: viewController)
+        
+        let countryDetailsCoordinator = CountryDetailsCoordinator()
+        countriesViewModel.doneSignal
+            .subscribe(on: RunLoop.main)
+            .sink(receiveValue: { countryViewModel in
+                countryDetailsCoordinator.countryViewModel = countryViewModel
+                self.coordinate(to: countryDetailsCoordinator, from: newViewController)
+            })
+            .store(in: &subscriptions)
 
         return Empty().eraseToAnyPublisher()
     }
