@@ -12,8 +12,7 @@ class AppCoordinator: CoordinatorProtocol {
     lazy var countriesCoordinator = CountriesCoordinator()
     private var subscriptions = Set<AnyCancellable>()
     
-    @discardableResult
-    func start(from viewController: ObservedViewController) -> AnyPublisher<Void, Never> {
+    func start(from viewController: ObservedViewController) {
         let vc = viewController
         vc.lifecycleEvent
             .receive(on: RunLoop.main)
@@ -22,8 +21,6 @@ class AppCoordinator: CoordinatorProtocol {
                 self.coordinate(to: self.countriesCoordinator, from: viewController)
             }
             .store(in: &subscriptions)
-        
-        return Empty().eraseToAnyPublisher()
     }
 }
 

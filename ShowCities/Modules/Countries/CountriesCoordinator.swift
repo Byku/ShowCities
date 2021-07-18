@@ -12,7 +12,7 @@ import Foundation
 class CountriesCoordinator: CoordinatorProtocol {
     var subscriptions = Set<AnyCancellable>()
 
-    func start(from viewController: ObservedViewController) -> AnyPublisher<Void, Never> {
+    func start(from viewController: ObservedViewController) {
        
         let networkService = NetworkManager()
         let countriesViewModel = CountriesViewModel(networkService: networkService)
@@ -33,7 +33,5 @@ class CountriesCoordinator: CoordinatorProtocol {
                 self.coordinate(to: countryDetailsCoordinator, from: newViewController)
             })
             .store(in: &subscriptions)
-
-        return Empty().eraseToAnyPublisher()
     }
 }

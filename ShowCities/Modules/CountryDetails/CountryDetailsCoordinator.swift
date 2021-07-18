@@ -11,7 +11,7 @@ class CountryDetailsCoordinator: CoordinatorProtocol {
     var countryViewModel: CountryViewModelProtocol?
     var subscriptions = Set<AnyCancellable>()
 
-    func start(from viewController: ObservedViewController) -> AnyPublisher<Void, Never> {
+    func start(from viewController: ObservedViewController) {
         let countryDetailsViewModel = CountryDetailsViewModel()
         let newViewController = CountryDetailsViewController(viewModel: countryDetailsViewModel)
         
@@ -19,7 +19,5 @@ class CountryDetailsCoordinator: CoordinatorProtocol {
             guard let viewModel = self.countryViewModel else { return }
             newViewController.showCapitalCityName(with: viewModel)
         }
-
-        return Empty().eraseToAnyPublisher()
     }
 }
